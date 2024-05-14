@@ -1,0 +1,216 @@
+[
+    {
+        "regex": "expected\\s+token",
+        "response":  "```expected token``` Hay un  \"[ ] ( ) ;\" que esta faltando o sobrando."
+    },
+    {
+        "regex": "must\\s+be\\s+a\\s+constant\\s+expression",
+        "response": "```must be a constant expression``` sucede cuando quieres usar variables/constantes en donde debes usar valores literales (1, true, \"texto\"), en ese caso usa macros en vez de variables/constantes."
+    },
+
+    {
+        "regex": "initialization\\s+data\\s+exceeds\\s+declared\\s+size",
+        "response": "```initialization data exceeds declared size``` estas definiendo el tamaño de un array pequeña para los datos que le asignas."
+    },
+    
+    {
+        "regex": "invalid\\s+array\\s+size",
+        "response": "```invalid array size``` la declaración de un array debe ser mayor a 0 o no negativa."
+    },
+    {
+        "regex": "symbol\\s+already\\s+defined",
+        "response": "```symbol already defined```la variable/constante ya ha sido declarada, borra la anterior o la actual, revisa que no haya includes incluidos duplicados."
+    },
+    
+    {
+        "regex": "must\\s+be\\s+lvalue",
+        "response": "```must be lvalue```dicho simbolo debe ser una variable y no una constante, funcion, texto, array."
+    },    
+    {
+        "regex": "invalid\\s+(expression|function\\s+or\\s+declaration)",
+        "response": "```invalid expression```Solo Dios sabe que estas intentando hacer, revisa la sintaxis."
+    },    
+    {
+        "regex": "array\\s+must\\s+be\\s+indexed",
+        "response": "```array must be indexed```el array debe ser indexado, por ejemplo, array[index]"
+    },    
+    {
+        "regex": "argument\\s+does\\s+not\\s+have\\s+a\\s+default\\s+value",
+        "response": "```argument does not have a default value```Posiblemente estan faltando colocarle más argumentos a la función."
+    },    
+    {
+        "regex": "argument\\s+type\\s+mismatch",
+        "response": "```argument type mismatch``` le estás colocando mal los argumentos a la función, asegurate de saber que tipo de argumentos pide la función."
+    },    
+    {
+        "regex": "empty\\s+statement",
+        "response": "```empty statement```dejaste un ; por ahi volando seguramente."
+    },   
+    {
+        "regex": "invalid\\s+string",
+        "response": "```invalid string```dejaste un \" sin cerrar."
+    },    
+    {
+        "regex": "extra\\s+characters\\s+on\\s+line",
+        "response": "```extra characters on line```algo no esta funcionando en tu archivo, intenta crear uno nuevo."
+    },    
+    {
+        "regex": "constant\\s+symbol\\s+has\\s+no\\s+size",
+        "response": "```constant symbol has no size```estas intentando sacarle el tamaño a una variable/contante que no es una array, no lo uses con sizeof."
+    },    
+    {
+        "regex": "array\\s+sizes\\s+do\\s+not\\s+match\\,\\s+or\\s+destination\\s+array\\s+is\\s+too\\s+small",
+        "response": "```array sizes do not match, or destination array is too small```estas definiendo el tamaño de un array pequeña para los datos que le asignas."
+    },
+    {
+        "regex": "\\.\\/samp03svr\\s+permission\\s+denied",
+        "response": "```./samp03svr permission denied```samp03svr requiere permisos,\nte vas a la lista de archivos, te vas al archivo en cuestion y le das permisos  y pones 755\nhttps://cdn.discordapp.com/attachments/947367217287270421/1210651794628153364/image.png?ex=66391ed8&is=6637cd58&hm=91fffdc2090692d69d6fb1efaf5664be213eb974a0b8fbb575fa4b0ede96f86f&\nhttps://cdn.discordapp.com/attachments/947367217287270421/1210651794980479056/image.png?ex=66391ed8&is=6637cd58&hm=0061b6e8ab95bd20d0dfef45abc4b93c2bfe7e83dfba968ff6521ed9cd04a8f5&"
+    },
+    {
+        "regex":"Include\\s+file\\s+version",
+        "response": "```Include file version```se debe a que el Include que mencionas, es incompatible con la version de plugin que posees.\nTe recomiendo descargar la ultima/penultima version y volver a compilar."
+    },
+    {
+        "regex":"undefined\\s+symbol",
+        "response": "```undefined symbol```se debe a que la variable se menciona en el error, posiblemente no esta declarada.\n¿Como la declaras? Bueno, dependiendo que o como estes usando la variable, te doy un par de ejemplos:\n* Arrays:\n> new Variable[cantidad];\n* Variable comun:\n> new Variable;\n* Variable con enums:\n> enum jData{...};\n> new PlayerInfo[MAX_PLAYERS][jData].`"
+    },
+    {
+        "regex":"array\\s+index\\s+out\\s+of\\s+bounds",
+        "response": "```array index out of bounds```tu error se debe a que la variable se menciona en el error, no tiene el tamaño de array correspondiente, te recomiendo revisar la variable y aumentar esta, aqui tienes un ejemplos:\n* arrays:\n> new variable[cantidad];\n> new variableglobal[cantidadaqui][var];"
+    },
+    {
+        "regex": "file\\:\\s+\"y_globaltags\"",
+        "response": "```fatal error 100: cannot read from file: \"y_globaltags\"```Actualiza YSI-includes y el Pawn compiler a la versión 3.10.10\nhttps://github.com/pawn-lang/YSI-Includes/releases/download/v5.10.0006/YSI-Includes.zip\nhttps://github.com/pawn-lang/compiler/releases/download/v3.10.10/pawnc-3.10.10-windows.zip"
+    },
+    {
+        "regex": "fatal\\s+error\\s+100:\\s+cannot\\s+read\\s+from\\s+file:",
+        "response": " ```fatal error 100: cannot read from file``` El compilador no encuentra el archivo include, también, asegurate de ejecutar el pawno o el compilador que trae la gm y no de otra gm."
+    },
+
+    {
+        "regex": "symbol\\is\\s+truncated\\s+to\\s+number\\s+characters",
+        "response": " ```symbol is truncated to number characters``` el nombre de la variable/constante/simbolo tiene un nombre muy largo."
+    },
+
+    {
+        "regex": "redefinition\\s+of\\s+constant\\/macro",
+        "response": " ```redefinition of constant/macro```la variable/constante ha sido previamente definida a otro valor."
+    },
+
+    {
+        "regex": "number\\s+of\\s+arguments\\s+does\\s+not\\s+match\\s+definition",
+        "response": " ```number of arguments does not match definition```el numero de argumentos colocados en la funcion no coincide con los parametros que esta pide, por ejemplo SendClientMessage\\(playerid, -1, \"Hola\"\\) pide 3 argumentos, asegurate de colocarle la cantidad y en el orden que pide."
+    },
+
+    {
+        "regex": "(symbol\\s+is\\s+never\\s+used|symbol\\s+is\\s+assigned\\s+a\\s+value\\s+that\\s+is\\s+never\\s+used)",
+        "response": " ```symbol is never used``` la variable/constante/funcion esta creada pero no se esta usando en el codigo, borrala o colocale stock."
+    },
+    {
+        "regex": "unknown\\s+symbol,\\s+or\\s+not\\s+a\\s+constantsymbol",
+        "response": "```unknown symbol, or not a constant symbol```este error ocurre porque no le estas pasando valores literales, por ejemplo (1, true, \"texto\") le estas pasando quizás una variable/constante."
+    },
+    {
+        "regex": "function\\s+should\\s+return\\s+a\\s+value",
+        "response": "```function should return a value```como dice el error el error en inglés, la función debe retornar un valor, revisa cual seria, posiblemente return 1."
+    },
+    {
+        "regex": "possible\\s+use\\s+of\\s+symbol\\s+before\\s+initialization",
+        "response": "```possible use of symbol before initialization```"
+    },
+    {
+        "regex": "tag\\s+mismatch",
+        "response": "```tag mismatch```Este warning ocurre cuando:\n\n- cuando le asignas a una variable con tag un valor tiene un tag distino o  simplemente no tiene un tag.\n\n- en la llamada de una función, le pasas un argumento que no tiene tag o tiene un tag distinto al parametro que pide dicha función. Revisa como está creada la función que estas utilizando y colocale los argumentos que pide.\n\n- Recuerda que los tags son etiquetas que a veces tienen las variables, por ejemplo \"Bool:, Mysql:, Float:\"."
+    },
+    {
+        "regex": "possibly\\s+a\\s+\\\"const\\\"\\s+array\\s+argument\\s+was\\s+intended",
+        "response": "```possibly a “const” array argument was intended```Si un array de una función no va a cambiar durante y dentro de la función deberías crearla con const, por ejemplo:\nImprimirNombre(nombre[]) -> ImprimirNombre(const nombre[]), esto mejorará el rendimiento del código."
+    },
+
+    {
+        "regex": "expression\\s+has\\s+no\\s+effect",
+        "response": "```expression has no effect```Lo que estás intentando hacer no tendrá efecto, busca una mejor forma de hacerlo."
+    },
+
+    {
+        "regex": "loose\\s+indentation",
+        "response": "```loose\\s+indentation```Respeta las sangrías del codigo, [esta imagen lo explica](<https://www.askpython.com/wp-content/uploads/2019/06/python-indentation.png.webp>) "
+    },
+
+    {
+        "regex": "local\\s+variable.*shadows\\s+a\\s+symbol\\s+at\\s+a\\s+preceding\\s+level",
+        "response": "```local variable shadows a symbol a preceding level```Posiblemente estas creando una variable que ya existe más arriba en el código (afuera o en la misma función), intenta otro nombre o revisa bien que estas haciendo."
+    },
+
+    {
+        "regex": "unreachable\\s+code",
+        "response": "```unreachable code```En tu código hay un return o un break que hace que todo lo que esté debajo de el nunca se ejecute."
+    },
+    {
+        "regex": "literal\\s+array/string\\s+passed\\s+to\\s+a\\s+non-const\\s+parameter",
+        "response": "```literal array/string passed to a non-const parameter```Este warning es común cuando usas la ultima versión de Pawn Compiler 3.10.10, no es nada malo pero si molesta un poco, lo puedes ignorar colocando ``#pragma warning disable 239`` en el top de tu código. Este warning te dice que no uses valores literales en la función, por ejemplo \"carlos\", en vez de ello, usa variables, por ejemplo ``new nombre[] = \"Carlos\";``, entonces deberia quedar asi: ``Imprimir(\"carlos\") --> Imprimir(nombre);``"
+    },
+    {
+        "regex": "Mismatch\\s+between\\s+the\\s+plugin",
+        "response": "```Mismatch between the plugin```Los archivos del plugin no están instalados correctamente, el include (.inc) y el plugin (.so/.dll) son distintos en versión entre si, actualizalo correctamente descargandolo desde GitHub, instala y vuelve a compilar."
+    },
+
+    {
+        "regex": "does\\s+not\\s+match\\s+plugin\\s+version",
+        "response": "```does not match plugin version```Los archivos del plugin streamer no están instalados correctamente, el include (.inc) y el plugin (.so/.dll) son distintos en versión entre si, este error es común porque el repositorio de GitHub de donde posiblemente lo descargaste está mal, [descarga streamer desde aqui](https://cdn.discordapp.com/attachments/1216731674662928394/1216734383931920435/samp-streamer-plugin-2.9.5-win-linux.zip?ex=663a27b2&is=6638d632&hm=43c6acaf2a6fb39448a5ed94330b425b09be3b7e1a6b6aabb082010eff185904&) instala y vuelve a compilar."
+    },
+    {
+        "regex": "function\\s+heading\\s+differs\\s+from\\s+prototype",
+        "response": "```function heading differs from prototype```Posiblemente falte o sobre argumentos en la función que estas llamando."
+    },
+    {
+        "regex": "function\\s+is\\s+deprecated",
+        "response": "```function is deprecated```la función esta obsoleta ya sea porque ya no existe o se cambió el nombre de esta, revisa la documentación."
+    },
+    {
+        "regex": "Stack\\/heap\\s+collision",
+        "response": "```stack heap collision```Te quedaste sin memoria, si estas en la pc cierra programas que tengas abiertos, si lo estas corriendo en un hosting asegurate que el host tenga suficiente memoria RAM, pero cuando hay un desbordamiento de memoria generalmente es por un tema de optimización de código, revisalo."
+    },
+    {
+        "regex": "y_malloc heap allocation is unstable",
+        "response": "```y_malloc heap allocation is unstable.```Coloca esto ``#define YSI_NO_HEAP_MALLOC`` antes de incluir cualquier libreria de YSI-includes"
+    },
+
+    {
+        "regex": "Out\\s+of\\s+code\\s+generation\\s+(CGen)\\s+space",
+        "response": "```Out of code generation (CGen) space```Coloca esto ``#define CGEN_MEMORY 20000`` antes de incluir cualquier libreria de YSI-includes"
+    },
+
+    {
+        "regex": "sscanf\\s+utilises\\s+community\\s+compiler\\s+features",
+        "response": "```sscanf utilises community compiler features```Descarga la última versión de Pawn Compiler (3.10.10) o coloca ``#define SSCANF_NO_NICE_FEATURES`` antes de ``#include <sscanf2>``"
+    },
+
+    {
+        "regex": "unsupported\\s+P-code\\s+file\\s+format",
+        "response": "```unsupported P-code file format```Hay algo que estás haciendo dentro del código que esta rompiendo el compilador, revisa la sintaxis o actualiza el Pawn Compiler (3.10.10)"
+    },
+
+    {
+        "regex": "It\\s+needs\\s+a\\s+gamemode0\\s+line\\s+at\\s+the\\s+very\\s+least.",
+        "response": "```It needs a gamemode0 line at the very least```samp-server no consigue el archivo .amx, asegurate que este exista (lo hayas compilado) y que no pese 0kb, también asegurate de que el nombre del .amx/.pwn este bien escrito en el server.cfg en el la linea \"gamemode\"."
+    },
+
+    {
+        "regex": " error\\s+013\\:\\sno\\sentry\\spoint",
+        "response": "```error 013: no entry point```Asegurate de que exista un main(){} escrito en el codigo."
+    },
+
+    {
+        "regex": "possibly\\s+unintended\\sassignment",
+        "response": "```possibly unintended assignment```Hay un signo de asignamiento (=) en una declaración if en vez de un operador de igualdad (==). Si no intentas comparar valores y quieres asignar un valor entonces mete el asigamiento dentro de parentesis, por ejemplo if((vehicle = GetPlayerVehicleID(playerid)))."
+    },
+    {
+        "regex": "function\\s+with\\s+tag\\s+result\\s+used\\s+before\\s+definition",
+        "response": "```function with tag result used before definition, forcing reparse```Estás llamando una función antes de su declaración, coloca la declaración de la función arriba en el código antes de donde la estas invocando/usando."
+    },
+    {
+        "regex": "Unable to load filterscript",
+        "response": "```Unable to load filterscript```No te cargó un o varios filterscripts/mapas, revisa si existe en la carpeta filterscripts o que este bien compilado. Si no tienes su .pwn quitalo del server.cfg."
+    }
+] 

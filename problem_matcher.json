@@ -134,12 +134,12 @@
 
     {
         "regex": "loose\\s+indentation",
-        "response": "```loose\\s+indentation```Respeta las sangrías del codigo, [esta imagen lo explica](<https://www.askpython.com/wp-content/uploads/2019/06/python-indentation.png.webp>) "
+        "response": "```loose indentation```Respeta las sangrías del codigo, [esta imagen lo explica](<https://www.askpython.com/wp-content/uploads/2019/06/python-indentation.png.webp>) "
     },
 
     {
-        "regex": "local\\s+variable.*shadows\\s+a\\s+symbol\\s+at\\s+a\\s+preceding\\s+level",
-        "response": "```local variable shadows a symbol a preceding level```Posiblemente estas creando una variable que ya existe más arriba en el código (afuera o en la misma función), intenta otro nombre o revisa bien que estas haciendo."
+        "regex": "local\\s+variable.*shadows\\s+a\\s+variable\\s+at\\s+a\\s+preceding\\s+level",
+        "response": "```local variable shadows a variable a preceding level```Posiblemente estas creando una variable que ya existe más arriba en el código (afuera o en la misma función), intenta otro nombre o revisa bien que estas haciendo."
     },
 
     {
